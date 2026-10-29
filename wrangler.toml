@@ -1,0 +1,13 @@
+name = "apify-router"
+main = "src/worker.ts"
+compatibility_date = "2026-01-01"
+
+# Optional but recommended: remembers which key owns which run across requests.
+# Create it with `npx wrangler kv namespace create KV`, then paste the id below.
+# [[kv_namespaces]]
+# binding = "KV"
+# id = "<your kv namespace id>"
+
+# Secrets (never put these in this file):
+#   npx wrangler secret put APIFY_KEYS      # one token per line, or a JSON array
+#   npx wrangler secret put ROUTER_TOKEN    # any long random string; clients use it instead of an Apify token

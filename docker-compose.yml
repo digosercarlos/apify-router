@@ -1,0 +1,7 @@
+services:
+  apify-router:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - "8787:8787"

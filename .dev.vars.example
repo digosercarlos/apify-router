@@ -1,0 +1,7 @@
+# Used by "Deploy to Cloudflare" and by `wrangler dev`. Copy to .dev.vars for local runs.
+
+# Apify tokens separated by commas
+APIFY_KEYS=
+
+# A long random string. Clients send it instead of an Apify token.
+ROUTER_TOKEN=

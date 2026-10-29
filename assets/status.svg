@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="470" viewBox="0 0 1100 470" role="img" aria-label="Terminal showing a run routed to key-2 and the balances from /_router/status">
+  <rect width="1100" height="470" rx="14" fill="#0d1117"/>
+  <rect width="1100" height="44" rx="14" fill="#161b22"/>
+  <rect y="30" width="1100" height="14" fill="#161b22"/>
+  <circle cx="28" cy="22" r="7" fill="#ff5f56"/><circle cx="50" cy="22" r="7" fill="#ffbd2e"/><circle cx="72" cy="22" r="7" fill="#27c93f"/>
+  <text x="550" y="28" text-anchor="middle" font-family="ui-sans-serif,system-ui,sans-serif" font-size="14" fill="#8b949e">apify-router: sample session</text>
+  <g font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="17">
+    <text x="28" y="86" fill="#7ee787">$</text>
+    <text x="52" y="86" fill="#e6edf3">curl -si -X POST $ROUTER/v2/acts/apify~hello-world/runs \</text>
+    <text x="76" y="112" fill="#e6edf3">-H "Authorization: Bearer $TOKEN" -d '{}'</text>
+    <text x="28" y="156" fill="#8b949e">HTTP/1.1 201 Created</text>
+    <text x="28" y="182" fill="#79c0ff">x-apify-router-key: key-2</text>
+    <text x="28" y="208" fill="#8b949e">{ "data": { "id": "Qx3k...", "status": "READY" } }</text>
+
+    <text x="28" y="262" fill="#7ee787">$</text>
+    <text x="52" y="262" fill="#e6edf3">curl -s $ROUTER/_router/status -H "Authorization: Bearer $TOKEN"</text>
+
+    <g fill="#8b949e">
+      <text x="28" y="306">id</text><text x="140" y="306">token</text><text x="360" y="306">remaining</text><text x="520" y="306">state</text>
+    </g>
+    <g fill="#e6edf3">
+      <text x="28" y="332">key-1</text><text x="140" y="332">apify_api_…aaaa</text>
+      <text x="28" y="358">key-2</text><text x="140" y="358">apify_api_…bbbb</text>
+      <text x="28" y="384">key-3</text><text x="140" y="384">apify_api_…cccc</text>
+      <text x="28" y="410">key-4</text><text x="140" y="410">apify_api_…dddd</text>
+    </g>
+    <text x="360" y="332" fill="#ff7b72">-0.18 USD</text><text x="520" y="332" fill="#ff7b72">skipped, over its cap</text>
+    <text x="360" y="358" fill="#7ee787">4.31 USD</text><text x="520" y="358" fill="#7ee787">paid for the run above</text>
+    <text x="360" y="384" fill="#7ee787">5.00 USD</text><text x="520" y="384" fill="#8b949e">standby</text>
+    <text x="360" y="410" fill="#7ee787">5.00 USD</text><text x="520" y="410" fill="#8b949e">standby</text>
+    <text x="28" y="446" fill="#8b949e"># sample output: tokens and balances are made up</text>
+  </g>
+</svg>

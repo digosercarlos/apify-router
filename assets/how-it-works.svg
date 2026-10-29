@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="520" viewBox="0 0 1280 520" role="img" aria-label="How apify-router works: clients call one URL, the router picks a key with balance and retries on the next one">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1020"/>
+      <stop offset="1" stop-color="#151a3a"/>
+    </linearGradient>
+    <linearGradient id="ac" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#a78bfa"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="520" fill="url(#bg)"/>
+  <g font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+    <text x="640" y="52" text-anchor="middle" font-size="26" font-weight="700" fill="#e5e7f5">How a request travels</text>
+
+    <!-- clients -->
+    <rect x="50" y="110" width="270" height="300" rx="16" fill="#171d40" stroke="#2f3869"/>
+    <text x="185" y="148" text-anchor="middle" font-size="18" font-weight="700" fill="#e5e7f5">Your scripts and agents</text>
+    <g font-size="16" fill="#c9cff0" text-anchor="middle">
+      <rect x="80" y="172" width="210" height="44" rx="10" fill="#222a57"/><text x="185" y="200">Claude Code</text>
+      <rect x="80" y="226" width="210" height="44" rx="10" fill="#222a57"/><text x="185" y="254">Codex / Cursor / OpenCode</text>
+      <rect x="80" y="280" width="210" height="44" rx="10" fill="#222a57"/><text x="185" y="308">apify-client / curl</text>
+    </g>
+    <text x="185" y="372" text-anchor="middle" font-size="14" fill="#9aa3c7" font-family="ui-monospace,Menlo,monospace">Authorization: Bearer ROUTER_TOKEN</text>
+    <text x="185" y="394" text-anchor="middle" font-size="14" fill="#9aa3c7" font-family="ui-monospace,Menlo,monospace">POST /v2/acts/.../runs</text>
+
+    <path d="M322 260H438" stroke="url(#ac)" stroke-width="4" marker-end="url(#arrow)" fill="none"/>
+
+    <!-- router -->
+    <rect x="440" y="90" width="400" height="340" rx="20" fill="#10142e" stroke="url(#ac)" stroke-width="3"/>
+    <text x="640" y="130" text-anchor="middle" font-size="22" font-weight="800" fill="#e5e7f5">apify-router</text>
+    <g font-size="16" fill="#c9cff0">
+      <circle cx="476" cy="176" r="14" fill="#38bdf8"/><text x="476" y="182" text-anchor="middle" font-size="15" font-weight="700" fill="#0b1020">1</text>
+      <text x="504" y="182">Read each key's remaining balance</text>
+      <circle cx="476" cy="236" r="14" fill="#60a5fa"/><text x="476" y="242" text-anchor="middle" font-size="15" font-weight="700" fill="#0b1020">2</text>
+      <text x="504" y="242">Pick the first key above the margin</text>
+      <circle cx="476" cy="296" r="14" fill="#8b9bfa"/><text x="476" y="302" text-anchor="middle" font-size="15" font-weight="700" fill="#0b1020">3</text>
+      <text x="504" y="302">Out of credits? Rest it, try the next</text>
+      <circle cx="476" cy="356" r="14" fill="#a78bfa"/><text x="476" y="362" text-anchor="middle" font-size="15" font-weight="700" fill="#0b1020">4</text>
+      <text x="504" y="362">Remember which key owns the run</text>
+    </g>
+    <text x="640" y="410" text-anchor="middle" font-size="14" fill="#9aa3c7">Cloudflare Workers · Node · Docker</text>
+
+    <path d="M842 200H958" stroke="url(#ac)" stroke-width="4" marker-end="url(#arrow)" fill="none"/>
+
+    <!-- apify -->
+    <rect x="960" y="110" width="270" height="300" rx="16" fill="#171d40" stroke="#2f3869"/>
+    <text x="1095" y="148" text-anchor="middle" font-size="18" font-weight="700" fill="#e5e7f5">api.apify.com</text>
+    <g font-size="15" font-family="ui-monospace,Menlo,monospace" fill="#c9cff0">
+      <rect x="990" y="172" width="210" height="44" rx="10" fill="#2a1d36" stroke="#ef4444" stroke-width="2"/>
+      <text x="1008" y="199">key-1  out of credits</text>
+      <rect x="990" y="226" width="210" height="44" rx="10" fill="#1d3a3a" stroke="#34d399" stroke-width="3"/>
+      <text x="1008" y="253">key-2  runs here</text>
+      <rect x="990" y="280" width="210" height="44" rx="10" fill="#222a57" stroke="#2f3869"/>
+      <text x="1008" y="307">key-3  standby</text>
+      <rect x="990" y="334" width="210" height="44" rx="10" fill="#222a57" stroke="#2f3869"/>
+      <text x="1008" y="361">key-4  standby</text>
+    </g>
+    <path d="M842 280C900 280 900 248 958 248" stroke="#34d399" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+    <path d="M842 200C890 200 900 194 958 194" stroke="#ef4444" stroke-width="3" stroke-dasharray="7 6" fill="none"/>
+
+    <text x="640" y="486" text-anchor="middle" font-size="15" fill="#9aa3c7">Datasets, key-value stores and logs of a run are always read with the key that started it.</text>
+  </g>
+</svg>

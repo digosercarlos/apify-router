@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="420" viewBox="0 0 1280 420" role="img" aria-label="apify-router: one endpoint in front of all your Apify API keys">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1020"/>
+      <stop offset="1" stop-color="#1b1446"/>
+    </linearGradient>
+    <linearGradient id="ac" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1280" height="420" fill="url(#bg)"/>
+  <g opacity="0.07" stroke="#fff">
+    <path d="M0 70H1280M0 140H1280M0 210H1280M0 280H1280M0 350H1280"/>
+    <path d="M160 0V420M320 0V420M480 0V420M640 0V420M800 0V420M960 0V420M1120 0V420"/>
+  </g>
+
+  <text x="80" y="150" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="68" font-weight="800" fill="url(#ac)">apify-router</text>
+  <text x="82" y="205" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="28" font-weight="600" fill="#e5e7f5">One endpoint in front of</text>
+  <text x="82" y="241" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="28" font-weight="600" fill="#e5e7f5">all your Apify API keys.</text>
+  <text x="82" y="292" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="19" fill="#9aa3c7">Picks a key with balance left. Retries on the next one</text>
+  <text x="82" y="318" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="19" fill="#9aa3c7">when credits run out. Self-hosted, open source.</text>
+
+  <g font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="17">
+    <g stroke="#475089" stroke-width="2" fill="none">
+      <path d="M930 100C990 100 990 210 1040 210"/>
+      <path d="M930 165C985 165 990 210 1040 210"/>
+      <path d="M930 230C985 230 990 210 1040 210"/>
+      <path d="M930 295C990 295 990 210 1040 210"/>
+    </g>
+    <g>
+      <rect x="760" y="78" width="170" height="44" rx="10" fill="#23294f" stroke="#ef4444" stroke-width="2"/>
+      <circle cx="782" cy="100" r="6" fill="#ef4444"/>
+      <text x="800" y="106" fill="#c9cff0">key-1  -0.18</text>
+      <rect x="760" y="143" width="170" height="44" rx="10" fill="#1d3a3a" stroke="#34d399" stroke-width="2"/>
+      <circle cx="782" cy="165" r="6" fill="#34d399"/>
+      <text x="800" y="171" fill="#c9cff0">key-2   4.31</text>
+      <rect x="760" y="208" width="170" height="44" rx="10" fill="#1d3a3a" stroke="#34d399" stroke-width="2"/>
+      <circle cx="782" cy="230" r="6" fill="#34d399"/>
+      <text x="800" y="236" fill="#c9cff0">key-3   5.00</text>
+      <rect x="760" y="273" width="170" height="44" rx="10" fill="#1d3a3a" stroke="#34d399" stroke-width="2"/>
+      <circle cx="782" cy="295" r="6" fill="#34d399"/>
+      <text x="800" y="301" fill="#c9cff0">key-4   5.00</text>
+    </g>
+    <circle cx="1060" cy="210" r="38" fill="#0b1020" stroke="url(#ac)" stroke-width="4" filter="url(#glow)"/>
+    <text x="1060" y="216" text-anchor="middle" fill="#e5e7f5" font-size="16" font-weight="700">router</text>
+    <text x="1060" y="276" text-anchor="middle" fill="#9aa3c7" font-size="14">one URL, one token</text>
+  </g>
+</svg>
